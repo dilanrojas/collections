@@ -1,10 +1,10 @@
+import java.util.List;
 import java.util.ArrayList;
-import java.util.Collection;
 
-public class Main {
+public class UsingList {
   public static void main(String[] args) {
-    Collection<String> fruits = new ArrayList<>();
-    Collection<String> redFruits = new ArrayList<>();
+    List<String> fruits = new ArrayList<>();
+    List<String> redFruits = new ArrayList<>();
 
     fruits.add("fresa");
     fruits.add("uvas");
@@ -37,6 +37,12 @@ public class Main {
     fruits.remove("manzana");
     fruits.forEach(apple -> print(apple));
 
+    print("\nRecuperando el valor del índice 0 en el array fruits");
+    print(fruits.get(0));
+
+    print("\nEstableciendo el índice 0 a 'piña'");
+    fruits.set(0, "piña");
+    print(fruits.get(0));
   }
 
   public static void print(String msg) {
